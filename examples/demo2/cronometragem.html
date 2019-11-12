@@ -9,6 +9,7 @@
 
 	<!-- Fonts and icons -->
 	<script src="../assets/js/plugin/webfont/webfont.min.js"></script>
+        <script src="../assets/js/cronometro.js"></script>
 	<script>
 		WebFont.load({
 			google: {"families":["Lato:300,400,700,900"]},
@@ -216,16 +217,58 @@
 			</div>
 		</div>
             
-            
-            
             <div class="main-panel">
                 <div class="content">
                     <div class="page-inner">
-                        
+                        <h1 class="text-center">Cronômetro com JavaScript</h1>
+                        <div id="cronometro" class="text-center">
+                            <div class="form-group"><h2 id="reloj">00 : 00 : 00</h2></div>
+                            <form name="cron" action="#" >
+                                <div style="display: flex; margin-left: 255px;">
+                                    <input class="btn btn-dark" style="width: 100px; text-align: center" type="button" value="Iniciar" name="empieza" />
+                                    <input class="btn btn-dark" style="margin-left: 10px; width: 100px; text-align: center" type="button" value="Parar" name="para" /><br/>
+                                    <input class="btn btn-dark" style="margin-left: 10px; width: 100px; text-align: center" type="button" value="Continuar" name="continua" />
+                                    <input class="btn btn-dark" style="margin-left: 10px; width: 100px; text-align: center" type="button" value="Reiniciar" name="reinicia" />
+                                    <input class="btn btn-dark" style="margin-left: 10px; width: 100px; text-align: center" type="button" value="Próximo" name="proximo"/>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- Table -->
+                        <br><br><br>
+                        <div class="col-md-12">
+                            <div class="card">
+
+                                <div class="card-header">
+
+                                    <div class="d-flex align-items-center">
+                                        <h4 class="card-title">Cronometragem</h4>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table id="add-row" class="display table table-striped table-hover" >
+                                            <thead>
+                                                <tr>
+                                                    <th>Nº Cronômetro</th>
+                                                    <th>Nome</th>
+                                                    <th>Tempo</th>
+
+                                                </tr>
+                                            </thead>
+                                            <tbody id="corpoTabela">
+                                                <tr>
+                       
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-
+              
 
             <!-- End Sidebar -->
             <div>
@@ -235,7 +278,6 @@
                     </div>
                 </footer>
             </div>
-
         </div>
         <!-- End Custom template -->
         <!--   Core JS Files   -->
